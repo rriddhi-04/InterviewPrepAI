@@ -3,7 +3,8 @@ import HERO_IMG from "../assets/hero-img.png";
 import {APP_FEATURES} from "../utils/data";
 import { useNavigate } from 'react-router-dom';
 import {LuSparkles} from 'react-icons/lu';
-
+import Modal from '../components/Loader/Modal';
+import Login from './Auth/Login';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const LandingPage = () => {
 
   return (
     <>
-    <div className="w-full min-h-full bg-[#FFFCEF]">
+    <div className="w-full min-h-full bg-[#FFFCEF] ">
       <div className="w=[500px] h-[500px] bg-amber-200/20 blur-[65px] absolute top-0 left-0"/>
       <div className="container mx-auto px-4 pt-6 pb-[200px] relative z-10">
         {/*Header*/}
@@ -57,7 +58,7 @@ const LandingPage = () => {
               From preparation to mastery - your ultimate interview toolkit id here.
             </p>
             <button 
-              className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-20 hover:border-yellow-300 transition-colors dursor-pointer"
+              className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-50 hover:border-yellow-300 transition-colors dursor-pointer"
               onClick={handleCTA}
             >
               Get Started
@@ -67,7 +68,7 @@ const LandingPage = () => {
       </div>
     </div>
 
-    <div className="w-full min-h-full relative z-10 ">
+    <div className="w-full min-h-full relative z-10">
       <div>
         <section className="flex items-center justify-center -mt-36">
           <img
@@ -90,7 +91,7 @@ const LandingPage = () => {
                 {APP_FEATURES.slice(0,3).map((feature) =>(
                   <div
                      key={feature.id}
-                     className="bg-[#FFFEF8] p-6 rounded-x; shadow-xs hover:shadow-lg shadow-amber-100 transaction border border-amber-100"
+                     className="bg-[#FFFEF8] p-6 rounded-xl shadow-xs hover:shadow-lg shadow-amber-100 transaction border border-amber-100"
                    >
                     <h3 className="text-base font-semibold mb-3">
                       {feature.title}
